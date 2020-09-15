@@ -28,7 +28,7 @@
                             <?php wp_nav_menu(array(
                                                 'theme_location' =>'primary',
                                                 'container'=>false,
-                                                'menu_class'=>'navbar-nav mr-auto'
+                                                'menu_class'=>'navbar-nav ml-auto'
                                                 )); ?>
                             <!-- <li class="nav-item active">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>

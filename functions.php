@@ -26,7 +26,6 @@ Activate Menus
 */
 
 function gtp_theme_support(){
-    add_theme_support( 'post-formats',array('aside','image','video'));
     add_theme_support( 'menus' );
     register_nav_menu('primary', 'Primary Header Menu');
     register_nav_menu('secondary', 'Secondary Footer Menu');      

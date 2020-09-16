@@ -12,23 +12,23 @@
     <div class="container">
         <div class="row">
             <div class=" col-xl-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                     <a class="navbar-brand" href=" <?php echo get_home_url(); ?>">GTP</a>
                     <button class="navbar-toggler" type="button" 
                                                     data-toggle="collapse" 
-                                                    data-target="#navbarSupportedContent" 
-                                                    aria-controls="navbarSupportedContent" 
+                                                    data-target="#navbarNav" 
+                                                    aria-controls="navbarNav" 
                                                     aria-expanded="false" 
                                                     aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <!-- <ul class="navbar-nav mr-auto"> -->
                             <?php wp_nav_menu(array(
                                 'theme_location' => 'primary',
                                 'container' => false,
-                                'menu_class' =>'navbar-nav ml-auto'
+                                'menu_class' =>'navbar-nav '
                             )); ?>
 
                             <!-- <li class="nav-item active">

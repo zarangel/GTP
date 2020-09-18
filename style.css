@@ -15,3 +15,79 @@ License: GNUI
 
 License URI: http://www.GNUI.com/
 */
+
+:root{
+    --FontMenus:'Lobster', cursive;
+    --FontSecundario:'Montserrat', sans-serif;
+    --FontPrimario:'Open Sans', sans-serif;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*  10px = 1rem */
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+
+}
+
+body{
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--FontSecundario);
+}
+
+nav{
+    margin: 5rem 0;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--FontPrimario);
+    font-weight: bold;
+    
+}
+
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+
+h4{
+    font-size: 2.2;
+}
+
+a{
+  
+    font-weight: bold;
+    margin-right: 2rem;
+ }
+
+.navbar a{
+    font-family: var(--FontPrimario);
+
+    color: chocolate;
+    text-decoration: none;
+ }
+
+ ul
+ {
+     list-style: none;
+    }
+
+ li:last-child a{
+     margin-right: 0;
+   
+ }
+
+ .row{
+     margin: 0; 
+     padding: 0;
+     background-color: black;   
+}

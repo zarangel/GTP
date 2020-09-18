@@ -1,65 +1,67 @@
 <!doctype html>
-<html>
 
-<head>
-    <meta charset="utf-8" />
-    <title> Grupo Táctico Publicitario</title>
-    <?php wp_head(); ?>
-</head>
+<html lang="es">
 
-<body <?php body_class(); ?>>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Grupo Táctico Publicitario</title>
+        <?php wp_head(); ?>
+    </head>
 
-    <div class="container">
-        <div class="row">
-            <div class=" col-xl-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                    <a class="navbar-brand" href=" <?php echo get_home_url(); ?>">GTP</a>
-                    <button class="navbar-toggler" type="button" 
-                                                    data-toggle="collapse" 
-                                                    data-target="#navbarNav" 
-                                                    aria-controls="navbarNav" 
-                                                    aria-expanded="false" 
-                                                    aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    <body <?php body_class(); ?>>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <!-- <ul class="navbar-nav mr-auto"> -->
+
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xl-12">
+                    <nav class="navbar navbar-expand-lg navbar-light xx">
+                        <a  href="<?php echo home_url();?>">
+                        <?php if(has_custom_logo()): ?>
+                            <?php 
+                                // Get Custom Logo URL
+                                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                                $custom_logo_url = $custom_logo_data[0];
+                                ?>
+                                <img src="<?php echo esc_url( $custom_logo_url ); ?>" height="60" width="60"
+                                alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/>
+                            
+                        <?php endif;
+
+                            echo bloginfo( 'name' ); ?> 
+                        </a>
+
+                        <button class="navbar-toggler bg-light" type="button" 
+                                data-toggle="collapse" 
+                                data-target="#navbarSupportedContent" 
+                                aria-controls="navbarSupportedContent" 
+                                aria-expanded="false" 
+                                aria-label="Toggle navigation">
+                            
+                            <span class="navbar-toggler-icon"></span>
+                        
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
                             <?php wp_nav_menu(array(
-                                'theme_location' => 'primary',
-                                'container' => false,
-                                'menu_class' =>'navbar-nav '
-                            )); ?>
+                                    'theme_location' => 'primary',
+                                    'container' => false,
+                                    'menu_class' =>'navbar-nav '
+                                )); ?>
+                            </ul>
+                            <!-- <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                            </form> -->
+                        </div>
+                    </nav>
 
-                            <!-- <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li> -->
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                            </li> -->
-                        <!-- </ul> -->
-                        <!-- <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form> -->
-                    </div>
-                </nav>
-
+                </div>
             </div>
-        </div>
+            <!-- <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width=" <?php echo get_custom_header()->width; ?>" alt="" /> -->
         
-        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width=" <?php echo get_custom_header()->width; ?>" alt="" />
+
+        
